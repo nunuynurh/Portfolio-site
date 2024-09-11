@@ -65,7 +65,7 @@ li {
     background-color: whitesmoke;
 }
 
-img {
+.img-profile {
     width: 250px;
     border-radius: 10px;
 }
@@ -120,9 +120,6 @@ img {
     list-style-type: none;
     line-height: 1px;
     display: flex;
-}
-
-.contact-list {
 }
 
 h2, h3{
