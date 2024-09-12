@@ -79,6 +79,12 @@ li:hover, .subtitle:hover {
     font-size: 14px;
 }
 
+#cta-img {
+    color: #877529;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .container2 {
     padding: 10px 50px 50px 50px;
     background-color: whitesmoke;
