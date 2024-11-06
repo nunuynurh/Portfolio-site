@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --primary-color: #c9e3ac;
-    --text-color: #37371f;
-    --accent-color: #90be6d;
+    --color-1: #f7fff7;
+    --color-2: #1a535c;
+    --color-3: #4ecdc4;
+    --color-4: #ff6b6b;
+    --color-5: #ffe66d;
 }
 
 * {
@@ -13,12 +15,12 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: #37371f;
+    color: var(--color-2);
 }
 
 nav {
     height: 60px;
-    background-color: var(--primary-color);
+    border: 0 0 1px 0 solid var(--color-2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -38,19 +40,24 @@ nav a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--color-2);
 }
 
-nav a:hover {
-    background-color: var(--accent-color);
+nav a:hover{
+    background-color: var(--color-2);
+    color: var(--color-1);
 }   
 
 nav .home-link {
     margin-right: auto;
 }
 
+nav .home-link:hover {
+    background-color: transparent;
+}
+
 nav .home-link img {
-    width: 150px;
+    width: 60px;
 }
 
 #sidebar-active {
@@ -61,8 +68,12 @@ nav .home-link img {
     display: none;
 }
 
-svg {
-    fill: var(--text-color);
+nav label:first-child svg {
+    fill: var(--color-1);
+}
+
+nav label:nth-child(2) svg {
+    fill: var(--color-2);
 }
 
 @media (max-width: 450px) {
@@ -76,12 +87,25 @@ svg {
         z-index: 10;
         width: 300px;
 
-        background-color: var(--primary-color);
+        
+        background-color: var(--color-2);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
     }
 
+    nav .home-link img {
+        background-color: var(--color-1);
+        border-radius: 50px;
+        width: 60px;
+    }
+
+    nav .home-link:hover, nav a:hover {
+        background-color: var(--color-1);
+        color: var(--color-2);
+    }
+
     .link-container a {
+        color: var(--color-1);
         box-sizing: border-box;
         height: auto;
         width: 100%;
@@ -112,59 +136,53 @@ svg {
     padding-right: 20px;
 }
 
-.container {
+.header {
     display: flex;
     justify-content: space-evenly;
     margin: 0;
     padding: 50px;
+    gap: 20px;
 }
 
-#header {
-    display: flex;
+.header div {
+    width: 40%;
+    text-align: center;
+    align-content: center;
     justify-content: center;
-    align-items: left;
-    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--color-2);
 }
 
-#title {
+.header h1 {
     font-size: 50px;
     font-weight: 500;
 }
 
-#my-desc {
-    width: 400px;
+.header p {
+    width: 100%;
     margin-top: 0px;
 }
 
-.img-frame {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid var(--accent-color);
-}
-
-.img-profile {
-    width: 250px;
+.header div img {
+    width: 200px;
     border-radius: 10px;
 }
 
-#cta{
+.header div:nth-child(2) p{
     padding-top: 20px;
     font-size: 14px;
 }
 
-#cta-img {
-    color: #877529;
+.header div:nth-child(2) a {
+    color: var(--color-3);
     font-weight: bold;
     text-decoration: none;
 }
 
 .container2 {
     padding: 10px 50px 50px 50px;
-    background-color: whitesmoke;
+    background-color: var(--primary-color);
 }
 
 .page-title {
@@ -180,7 +198,7 @@ svg {
 .content{
     text-align: center;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--primary-color);
 }
 
 .img-port {
