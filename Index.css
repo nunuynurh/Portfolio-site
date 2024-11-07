@@ -19,6 +19,10 @@ body {
     color: var(--color-2);
 }
 
+ul {
+    list-style: none;
+}
+
 nav {
     height: 60px;
     border: 0 0 1px 0 solid var(--color-2);
@@ -128,38 +132,31 @@ nav label:nth-child(2) svg {
     }
 }
 
-.dummy {
-    width: 150px;
-    padding-right: 20px;
-}
-
 .header {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 50px;
-    gap: 20px;
-}
-
-.header div {
-    text-align: center;
-    align-content: center;
+    flex-wrap: wrap-reverse;
     justify-content: center;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid var(--color-2);
+    margin: 0;
+    padding: 10px;
+    gap: 10px;
 }
 
-.header div:first-child {
-    width: 50%;
+.header > div {
+    padding: 20px;
 }
 
-.header div:nth-child(2) {
-    width: 30%;
+.header > div:first-child {
+    align-content: center;
+    justify-content: left;
+    width: 600px;
+}
+
+.header > div:first-child > div {
+    padding: 10px;
 }
 
 .header h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
@@ -168,14 +165,34 @@ nav label:nth-child(2) svg {
     margin-top: 0px;
 }
 
-.header div img {
-    width: 200px;
-    border-radius: 10px;
+.header h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
 }
 
-.header div:nth-child(2) p{
+.header ul {
+    justify-content: space-between;
+}
+
+.header > div:nth-child(2) {
+    text-align: center;
+    align-content: center;
+    position: relative;
+}
+
+.header img {
+    width: 300px;
+}
+
+.header > div:nth-child(2) p{
     padding-top: 20px;
-    font-size: 14px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 10;
+    color: var(--color-1);
 }
 
 .header div:nth-child(2) a {
