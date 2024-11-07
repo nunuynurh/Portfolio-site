@@ -165,6 +165,12 @@ nav label:nth-child(2) svg {
     margin-top: 0px;
 }
 
+.header div:first-child div:nth-child(2){
+    padding: 10px 15px;
+    border: 1px solid var(--color-2);
+    width: 50%;
+}
+
 .header h2 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -172,7 +178,17 @@ nav label:nth-child(2) svg {
 }
 
 .header ul {
+    margin-top: 5px;
+}
+
+.header ul li{
+    display: flex;
     justify-content: space-between;
+    padding: 5px 0;
+}
+
+.header progress {
+    accent-color: var(--color-3);
 }
 
 .header > div:nth-child(2) {
@@ -182,17 +198,14 @@ nav label:nth-child(2) svg {
 }
 
 .header img {
-    width: 300px;
+    width: 200px;
+    border-radius: 100px;
 }
 
 .header > div:nth-child(2) p{
     padding-top: 20px;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    z-index: 10;
-    color: var(--color-1);
+    font-size: 1rem;
+    
 }
 
 .header div:nth-child(2) a {
