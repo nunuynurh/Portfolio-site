@@ -17,6 +17,7 @@ body {
     background-color: var(--color-1);
     font-family: "Poppins", sans-serif;
     color: var(--color-2);
+    font-size: 1rem;
 }
 
 ul {
@@ -24,8 +25,13 @@ ul {
 }
 
 nav {
+    background-color: var(--color-1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
     height: 60px;
-    border: 0 0 1px 0 solid var(--color-2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -48,7 +54,7 @@ nav a {
     color: var(--color-2);
 }
 
-nav a:hover{
+nav a:not(.home-link):hover{
     background-color: var(--color-2);
     color: var(--color-1);
 }   
@@ -100,10 +106,15 @@ nav label:nth-child(2) svg {
         width: 60px;
     }
 
-    nav .home-link:hover, nav a:hover {
+    nav a:not(.home-link):hover{
         background-color: var(--color-1);
         color: var(--color-2);
-    }
+    }  
+
+    nav .home-link:hover{
+        background-color: var(--color-1);
+        color: var(--color-2);
+    } 
 
     .link-container a {
         color: var(--color-1);
@@ -132,114 +143,104 @@ nav label:nth-child(2) svg {
     }
 }
 
-.header {
-    justify-content: center;
-    margin: 0;
-    padding: 10px;
-    gap: 10px;
-}
-
-.header > div {
-    padding: 20px;
-}
-
-.header > div:first-child {
-    text-align: center;
-    align-content: center;
-    justify-content: left;
-}
-
-.header h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-}
-
-.header p {
-    width: 100%;
-    margin-top: 0px;
-}
-
-.header > div:nth-child(2) {
-    width: 700px;
+header {
+    margin-top: 60px;
+    background-color: var(--color-2);
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: space-around;
-    border: 1px solid var(--color-2);
-    border-radius: 10px;
+    justify-content: space-evenly;
+    padding: 50px 10px;
 }
 
-.header img {
-    width: 240px;
+header > div:first-child {
+    justify-content: center;
+    align-content: center;
 }
 
-.header div:nth-child(2) div:nth-child(2){
+header img {
+    width: 600px;
+}
+
+header > div:nth-child(2) {
+    display: block;
+    width: 450px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header > div:nth-child(2) div:nth-child(1) {
+    width: 450px;
+    align-content: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: var(--color-1);
+    font-size: 3rem;
+}
+
+header > div:nth-child(2) h2 {
+    color: var(--color-1);
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+header >div:nth-child(2) p {
+    color: var(--color-1);
+}
+
+header div:nth-child(2) div:nth-child(2){
     padding: 10px 10px;
-    width: 300px;
+    width: 400px;
     background-color: var(--color-1);
     border-radius: 10px;
+    margin: 30px auto 10px auto;
 }
 
-.header h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align: center;
+header h3 {
     color: var(--color-2);
+    font-weight: normal;
 }
 
-.header ul {
+header ul {
     padding: 10px 15px;
     margin-top: 5px;
     background-color: var(--color-2);
 }
 
-.header ul li{
+header ul li{
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
     color: var(--color-1);
 }
 
-.header progress {
+header progress {
+    width: 250px;
     accent-color: var(--color-3);
 }
 
-.container2 {
+main {
     padding: 10px 50px 50px 50px;
-    background-color: var(--primary-color);
 }
 
-.page-title {
+main h2 {
+    font-size: 2rem;
     text-align: center;
-    font-weight: 600;
 }
 
-.page-content {
-    display: flex;
-    justify-content: space-evenly;
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
-.content{
-    text-align: center;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-}
-
-.img-port {
-    width: 200px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.subtitle {
-    margin-top: 0px;
-}
-
-.desc-content {
-    width: 200px;
-    margin: 20px;
-    font-size: 14px;
+details {
+    border: 1px solid var(--color-2);
+    padding: 10px 15px;
 }
 
 .footer {
