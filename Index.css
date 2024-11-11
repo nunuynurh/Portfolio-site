@@ -344,3 +344,29 @@ footer img {
     background-color: var(--color-2);
     border-radius: 100px;
 }
+
+@media (max-width: 1000px) {
+    header h1 {
+        font-size: 8vw;
+    }
+
+    .header-container {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    header img {
+        display: none;
+    }
+
+    main .project-container {
+        gap: 20px;
+    }
+    footer img {
+        display: none;
+    }
+}
+
